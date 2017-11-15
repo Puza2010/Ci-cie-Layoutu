@@ -1,27 +1,79 @@
-* {
-	box-sizing: border-box;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
 
-h1, footer p {
-	text-align: center;	
-}
-
-.container {
-	width: 100%;
-	max-width: 900px;
+body {
 	margin: 0 auto;
 }
 
-.row:before:, .row:after: {
+/* HEADER SPECIFICATIONS */
+
+header {
+	padding: 0 50px;
+	background-color: #313234;
+	height: 50px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav:before, nav:after {
 	content: "";
-	display: table;
+	display: block;
 	clear: both;
 }
 
-[class*="col-"] {
-	float: left;
-	min-height: 300px;
-	padding: 10px;
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+header>nav>ul {
+	float: right;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+header>nav>ul>li {
+	display: inline-block;	
+}
+
+header>nav>ul>li>a {
+	line-height: 50px;
+	padding: 0 20px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header>nav>ul>li>a:hover {
+	background-color: rgba(72, 72, 72, 0.9);
+}
+
+header>nav>img {
+	padding: 10px 0;	
+}
+
+/* FIRST SECTION SPECIFICATIONS */
+
+.hero {
+	background: url(https://images.pexels.com/photos/371900/pexels-photo-371900.jpeg?h=350&auto=compress&cs=tinysrgb);
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+}
+
+.slogan {
+	background-color: rgba(0, 0, 0, 0.5);
+	float: right;
+	max-width: 800px;
+	color: white;
+	margin: 100px auto;
+	padding: 0 20px;
+}
+
+/* SECTION WITH 3 ICONS */
+
+h2 {
+	font-size: 20px;	
 }
 
 .col-1 {width: 8.33%;}
@@ -37,38 +89,164 @@ h1, footer p {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.col-offset-1 {margin-left: 8.33%;}
-.col-offset-2 {margin-left: 16.66%;}
-.col-offset-3 {margin-left: 25%;}
-.col-offset-4 {margin-left: 33.33%;}
-.col-offset-5 {margin-left: 41.66%;}
-.col-offset-6 {margin-left: 50%;}
-.col-offset-7 {margin-left: 58.33%;}
-.col-offset-8 {margin-left: 66.66%;}
-.col-offset-9 {margin-left: 75%;}
-.col-offset-10 {margin-left: 83.33%;}
-.col-offset-11 {margin-left: 91.66%;}
-
-.specification_1-1 {
-	background-color: orange;	
+[class*="col-"] {
+	float: left;
+	min-height: 1px;
 }
 
-.specification_1-2 {
-	background-color: green;	
+.icon-and-text {
+	padding: 50px 0;
+	text-align: center;
+	display: inline-block;
 }
 
-.specification_2-1 {
-	background-color: blue;	
+section>div>div>p {
+	padding: 0 10px;	
 }
 
-.specification_2-2 {
-	background-color: yellow;	
+.row:before, .row:after {
+	content: "";
+	display: table;
+	clear: both;	
 }
 
-.specification_2-3 {
-	background-color: #876 ;	
+.icon-looming:hover {
+	color: blue;	
 }
 
-.specification_2-4 {
+/* SECTION FEATURED WORKS */
+
+.featured-works {
+	text-align: center;
+	padding: 0 0 30px 0;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* GALLERY SECTION */
+
+.gallery img {
+	width: 100%;
+	height: 12.5%;
+	background-color: #FFF;
+}
+
+.layer {
+	display: none;
+	position: absolute;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	width: 50px;
+  	line-height: 100px;
+}
+
+.photo:hover .layer {
+	display: block;
+}
+
+.photo {
+	position: relative;	
+}
+
+.photo:hover img {
+	opacity: 0.5;	
+}
+
+/* EMPLOYEES SECTION */
+
+.employe-section {
+	padding: 100px 0px;	
+	
+}
+
+.employe {
+	display: inline-block;
+	text-align: center;
+}
+
+.employe-button {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: none;
+}
+
+.employe>p {
+	text-align: center;	
+}
+
+.employe-button:hover {
 	background-color: #CCC;	
 }
+
+.workers p {
+	display: none;	
+}
+
+.workers:hover p {
+	display: block;	
+}
+
+/* SECTION WITH ONE IMAGE AND SOME TEXT */
+
+.image-text-section {
+	background-color: #CCC;	
+}
+
+.image-text {
+	display: inline-block;
+}
+
+.image-text h1, .image-text p {
+	padding: 0 50px;		
+}
+
+.text-nextto-text {
+	display: inline-block;	
+}
+
+/* NUMBERS SECTION */
+
+.numbers {
+	display: inline-block;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.numbers h3 {
+	font-size: 60px;
+}
+
+.numbers p {
+	color: blue;
+	font-size: 20px;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+.footer-div {
+	display: inline-block;	
+}
+
+.coca-cola {
+	display: inline-block;	
+	float: right;
+}
+
+.last-strip {
+	text-align: center;
+	height: 60px;
+	color: white;
+	background-color: black;
+	padding: 10px 0;
+}
+
+
+
